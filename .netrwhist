@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/rreusser/HappyFunCorp/projects/alma/allegory/app/assets/javascripts'
+let g:netrw_dirhist_2='/Users/rreusser/HappyFunCorp/projects/alma/allegory/app/views/news_items'
+let g:netrw_dirhist_3='/private/tmp/skl'
+let g:netrw_dirhist_4='/Users/rreusser/HappyFunCorp/projects/alma/allegory/config/initializers'
+let g:netrw_dirhist_5='/Users/rreusser/HappyFunCorp/projects/alma/allegory/app/models'
+let g:netrw_dirhist_6='/usr/local/man/man1'
+let g:netrw_dirhist_7='/Users/rreusser/.vim/snippets'
+let g:netrw_dirhist_8='/Users/rreusser/.vim'
+let g:netrw_dirhist_9='/Users/rreusser/HappyFunCorp/projects/alma/allegory/test'
