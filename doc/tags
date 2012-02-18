@@ -432,6 +432,12 @@ g:tlib_sortprefs_threshold	tlib.txt	/*g:tlib_sortprefs_threshold*
 g:tlib_tag_substitute	tlib.txt	/*g:tlib_tag_substitute*
 g:tlib_tags_extra	tlib.txt	/*g:tlib_tags_extra*
 g:tlib_viewline_position	tlib.txt	/*g:tlib_viewline_position*
+git-vim	git-vim.txt	/*git-vim*
+git-vim-commands	git-vim.txt	/*git-vim-commands*
+git-vim-contents	git-vim.txt	/*git-vim-contents*
+git-vim-keymaps	git-vim.txt	/*git-vim-keymaps*
+git-vim-license	git-vim.txt	/*git-vim-license*
+git-vim.txt	git-vim.txt	/*git-vim.txt*
 i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
 i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
 ingres	dbext.txt	/*ingres*
