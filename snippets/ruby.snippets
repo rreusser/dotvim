@@ -3,8 +3,26 @@ snippet #!
 	#!/usr/bin/ruby
 
 # Rails Snippets
+snippet rt
+	respond_to do |format|
+		format.html { ${1:block} }
+		format.json { ${2:block} }
+	end
 snippet :a
 	:action => ${1:action}
+snippet dt
+	drop_table :${1:tablename}
+snippet ct
+	create_table :${1:tablename} do |t|
+		t.${2}
+	end
+snippet ac
+	add_column :${1:tablename}, :${2:columnname}, :${3:type}
+snippet rc
+	remove_column :${1:tablename}, :${2:columnname}
+snippet arc
+	add_column :${1:tablename}, :${2:columnname}, :${3:type}
+	remove_column :${4:$1}, :${5:$2}
 snippet :i
 	:id => ${1:id}
 snippet :o
@@ -41,6 +59,8 @@ snippet hm
 	has_many :${1:model}
 snippet hmt
 	has_many :${1:object}, :through => :${2:association}
+snippet pm
+	:polymorphic => true
 snippet ho
 	has_one :${1:model}
 snippet :rejif
