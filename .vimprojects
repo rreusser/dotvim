@@ -1,0 +1,880 @@
+
+allegory=/Users/rreusser/HappyFunCorp/projects/alma/allegory filter="*" {
+ Gemfile
+ Gemfile.lock
+ README
+ Rakefile
+ TODO
+ config.ru
+ admin=app/admin {
+	cases.rb
+	dashboards.rb
+	firms.rb
+	newsletters.rb
+	users.rb
+  }
+  assets=app/assets {
+   fonts=fonts {
+    classicround-medium-webfont.eot
+    classicround-medium-webfont.svg
+    classicround-medium-webfont.ttf
+    classicround-medium-webfont.woff
+    ptc55f-webfont.eot
+    ptc55f-webfont.svg
+    ptc55f-webfont.ttf
+    ptc55f-webfont.woff
+    ptc75f-webfont.eot
+    ptc75f-webfont.svg
+    ptc75f-webfont.ttf
+    ptc75f-webfont.woff
+    pts55f-webfont.eot
+    pts55f-webfont.svg
+    pts55f-webfont.ttf
+    pts55f-webfont.woff
+    pts56f-webfont.eot
+    pts56f-webfont.svg
+    pts56f-webfont.ttf
+    pts56f-webfont.woff
+    pts75f-webfont.eot
+    pts75f-webfont.svg
+    pts75f-webfont.ttf
+    pts75f-webfont.woff
+    pts76f-webfont.eot
+    pts76f-webfont.svg
+    pts76f-webfont.ttf
+    pts76f-webfont.woff
+   }
+   images=images {
+    rails.png
+    img=img {
+     bg=bg {
+      back.png
+      body.png
+      bottom-bar.png
+      c5.png
+      cancel.png
+      cases.png
+      corners.png
+      drop.png
+      dt1-r3.png
+      dt1.png
+      e.png
+      edit-bg.png
+      edit.png
+      footer.png
+      header.png
+      hide.png
+      logo.png
+      menu.png
+      next.png
+      o.png
+      save.png
+      search.png
+      sort.png
+      td.png
+     }
+     dms=dms {
+      file.png
+      folder.png
+      shared_folder.png
+     }
+     ico=ico {
+      alert.png
+      arrow.png
+      calendar.png
+      calendar1.png
+      mail.png
+      t1.png
+      t2.png
+      t3.png
+     }
+     newsletter=newsletter {
+      body.png
+      box.png
+      input.png
+      logo.png
+      submit.png
+     }
+    }
+   }
+   javascripts=javascripts {
+   active_admin.js
+   application.js
+   case.js
+   case_new.js
+   event_calendar.js
+   events.js
+   header.js
+   init.js
+   menu.js
+   newsletters.js.coffee
+   users.js.coffee
+   welcome.js.coffee
+   }
+   stylesheets=stylesheets {
+    active_admin.css.scss
+    application.css
+    cases.css.scss
+    event_calendar.css
+    fonts.css
+    news_items.css.scss
+    newsletters.css.scss
+    style.css
+    users.css.scss
+    welcome.css.scss
+   }
+  }
+  controllers=app/controllers {
+   allegory_assets_controller.rb
+   application_controller.rb
+   calendar_controller.rb
+   cases_controller.rb
+   events_controller.rb
+   folders_controller.rb
+   news_items_controller.rb
+   newsletters_controller.rb
+   users_controller.rb
+   welcome_controller.rb
+   users=users {
+    confirmations_controller.rb
+    registrations_controller.rb
+   }
+  }
+  helpers=app/helpers {
+   allegory_assets_helper.rb
+   application_helper.rb
+   calendar_helper.rb
+   case_helper.rb
+   folders_helper.rb
+   events.rb
+   newsletters_helper.rb
+   user_helper.rb
+   users_helper.rb
+   welcome_helper.rb
+  }
+  mailers=app/mailers {
+  }
+  models=app/models {
+   ability.rb
+   admin_user.rb
+   alert_event.rb
+   allegory_asset.rb
+   annotation.rb
+   article.rb
+   attachment.rb
+   calendar_event.rb
+   case.rb
+   cases_contactable.rb
+   cases_user.rb
+   client.rb
+   co_counsel.rb
+   contactable.rb
+   content.rb
+   deposition.rb
+   email.rb
+   email_attribute.rb
+   event.rb
+   firm.rb
+   folder.rb
+   key_text.rb
+   news_item.rb
+   newsletter.rb
+   note.rb
+   opposing_counsel.rb
+   production_load.rb
+   role.rb
+   rule.rb
+   user.rb
+  }
+  views=app/views {
+   allegory_assets=allegory_assets {
+    _form.html.erb
+    crocodoc.html.erb
+    edit.html.erb
+    index.html.erb
+    new.html.erb
+    show.html.erb
+   }
+   cases=cases {
+    _attorney.html.haml
+    _client.html.haml
+    _co_counsel.html.haml
+    _navbar.html.haml
+    _opposing_counsel.html.haml
+    _staff.html.haml
+    _user.html.haml
+    add.html.haml
+    add_or_create.html.haml
+    calendar.html.haml
+    chronology.html.haml
+    correspondence.html.haml
+    edit.html.haml
+    filings.html.haml
+    index.html.haml
+    new.html.haml
+    production_log.html.haml
+    show.html.haml
+   }
+   devise=devise {
+    confirmations=confirmations {
+     new.html.erb
+    }
+    mailer=mailer {
+     confirmation_instructions.html.erb
+     reset_password_instructions.html.erb
+     unlock_instructions.html.erb
+    }
+    passwords=passwords {
+     edit.html.erb
+     new.html.erb
+    }
+    sessions=sessions {
+     new.html.haml
+    }
+    shared=shared {
+     _links.erb
+    }
+    unlocks=unlocks {
+     new.html.erb
+    }
+   }
+   events=events {
+    _event.html.haml
+    _form.html.haml
+    _newsfeed.html.haml
+    _show.html.haml
+    create.js.erb
+		create_calendar_event.js.erb
+    index.html.haml
+   }
+   firms=firms {
+   }
+   folders=folders {
+    _breadcrumbs.html.erb
+    _form.html.erb
+    edit.html.erb
+    home.erb
+    index.html.erb
+    new.html.erb
+    show.html.erb
+   }
+   layouts=layouts {
+    _flash.html.haml
+    _footer.html.haml
+    _header.html.haml
+    application.html.haml
+    newsletters.html.haml
+   }
+   newsletters=newsletters {
+    create.js.erb
+    index.html.haml
+   }
+   users=users {
+    registrations=registrations {
+     edit.html.erb
+     new.html.haml
+    }
+   }
+   welcome=welcome {
+    more_info.html.haml
+    new.html.haml
+    show.html.haml
+    update.html.haml
+   }
+  }
+
+ config=config {
+  amazon_s3.yml
+  application.rb
+  boot.rb
+  database.yml
+  environment.rb
+  routes.rb
+  environments=environments {
+   development.rb
+   production.rb
+   staging.rb
+   test.rb
+  }
+  initializers=initializers {
+   active_admin.rb
+   backtrace_silencers.rb
+   devise.rb
+   inflections.rb
+   mime_types.rb
+   sass-rails-importer-monkey-patch.rb
+   secret_token.rb
+   session_store.rb
+	 time_formats.rb
+   wrap_parameters.rb
+  }
+  locales=locales {
+   devise.en.yml
+   en.yml
+  }
+ }
+ db=db {
+  schema.rb
+  seeds.rb
+  migrate=migrate {
+   20120120061126_rebase_migrations.rb
+   20120122143432_create_admin_notes.rb
+   20120122143433_move_admin_notes_to_comments.rb
+   20120122203428_devise_create_admin_users.rb
+   20120122210849_devise_create_users.rb
+   20120122214510_change_goofy_enums_to_strings.rb
+   20120122222043_add_person_id_to_user.rb
+   20120122223725_add_user_id_to_person.rb
+   20120123030804_add_person_type_column.rb
+   20120123033532_add_ids_to_person_subclasses.rb
+   20120123053319_rename_support_to_staffer.rb
+   20120123054308_finish_renaming_support_to_staffer.rb
+   20120123081910_create_firms.rb
+   20120123085443_add_cases_to_firm.rb
+   20120124162205_delete_person_model.rb
+   20120124163145_clean_up_db_models.rb
+   20120124172522_add_firm_id_to_user.rb
+   20120124173922_users_have_and_belong_to_many_roles.rb
+   20120124174230_create_roles.rb
+   20120124174517_create_cases_users.rb
+   20120125075022_add_name_to_users.rb
+   20120125195652_add_domain_name_to_firm.rb
+   20120126074735_add_employee_number_to_user.rb
+   20120126074907_add_initials_to_user.rb
+   20120126081315_add_confirmable_to_users.rb
+   20120131033142_create_opposing_counsels.rb
+   20120131033900_create_clients.rb
+   20120131042257_create_co_counsels.rb
+   20120131042838_add_case_id_to_co_counsel.rb
+   20120131042936_add_opposing_counsel_to_case.rb
+   20120131165755_create_cases_rules.rb
+   20120131165829_create_rules.rb
+   20120131190330_change_news_item_person_id_to_user_id.rb
+   20120201132309_create_allegory_assets.rb
+   20120201132633_add_attachment_uploaded_file_to_asset.rb
+   20120201142816_create_folders.rb
+   20120201160802_add_folder_id_to_allegory_assets.rb
+   20120201181951_add_scribd_ids_to_allegory_assets.rb
+   20120207060929_create_events.rb
+   20120208085124_add_version_to_allegory_assets.rb
+   20120208090106_add_versioning_table_to_allegory_assets.rb
+   20120208105149_add_crocodoc_uuid_and_crocodoc_short_id_to_allegory_assets.rb
+   20120209171456_add_assetable_reference_to_allegory_assets.rb
+   20120209173000_create_production_logs.rb
+   20120209181035_create_contents.rb
+   20120209182555_create_key_texts.rb
+   20120209182813_create_notes.rb
+   20120209191443_create_email_attributes.rb
+   20120213115348_minor_changes_allegory.rb
+   20120214202328_add_parent_id_and_tab_to_contents.rb
+   20120215203812_create_contactables.rb
+   20120217101107_remove_extra_column_from_allegory_assets.rb
+   20120217152304_add_citier_to_events.rb
+   20120218094431_merge_news_item_with_event.rb
+   20120218212131_update_event_citier_views.rb
+   20120219173555_add_time_zone_to_user.rb
+  }
+ }
+ lib=lib {
+  crocodoc.rb
+  dms.rb
+  assets=assets {
+  }
+  tasks=tasks {
+   jsroutes.rb
+   populate.rake
+  }
+ }
+ log=log {
+  development.log
+  production.log
+ }
+ public=public {
+  404.html
+  422.html
+  500.html
+  favicon.ico
+  robots.txt
+  javascripts=javascripts {
+  }
+  stylesheets=stylesheets {
+  }
+ }
+ script=script {
+  rails
+ }
+ test=test {
+  test_helper.rb
+  fixtures=fixtures {
+   activities.yml
+   admin_users.yml
+   allegory_assets.yml
+   cases.yml
+   cases_users.yml
+   clients.yml
+   co_counsels.yml
+   contactables.yml
+   contents.yml
+   email_attributes.yml
+   firms.yml
+   folders.yml
+   key_texts.yml
+   news_items.yml
+   newsletters.yml
+   notes.yml
+   opposing_counsel_people.yml
+   opposing_counsels.yml
+   production_logs.yml
+   roles.yml
+   rules.yml
+   users.yml
+  }
+  functional=functional {
+   allegory_assets_controller_test.rb
+   cases_controller_test.rb
+   folders_controller_test.rb
+   news_items_controller_test.rb
+   newsletters_controller_test.rb
+   users_controller_test.rb
+   welcome_controller_test.rb
+  }
+  integration=integration {
+  }
+  performance=performance {
+   browsing_test.rb
+  }
+  unit=unit {
+   activity_test.rb
+   admin_user_test.rb
+   allegory_asset_test.rb
+   case_test.rb
+   cases_user_test.rb
+   client_test.rb
+   co_counsel_test.rb
+   contactable_test.rb
+   content_test.rb
+   email_attribute_test.rb
+   firm_test.rb
+   folder_test.rb
+   key_text_test.rb
+   news_item_test.rb
+   newsletter_test.rb
+   note_test.rb
+   opposing_counsel_person_test.rb
+   opposing_counsel_test.rb
+   person_test.rb
+   production_log_test.rb
+   role_test.rb
+   rule_test.rb
+   user_test.rb
+   helpers=helpers {
+    cases_helper_test.rb
+    news_items_helper_test.rb
+    newsletters_helper_test.rb
+    user_helper_test.rb
+    users_helper_test.rb
+    welcome_helper_test.rb
+   }
+  }
+ }
+ vendor=vendor {
+  assets=assets {
+   javascripts=javascripts {
+    css_browser_selector.js
+    jquery-ui-1.8.17.custom.js
+    jquery-ui-1.8.17.custom.min.js
+    jquery.jscrollpane.min.js
+    jquery.mousewheel.min.js
+    jquery.strings.js
+    jquery.utils.js
+    ui.timepickr.js
+   }
+   stylesheets=stylesheets {
+    jquery-ui-1.8.17.custom.css
+    jquery.jscrollpane.css
+    ui.timepickr.css
+    images=images {
+     ui-bg_flat_0_aaaaaa_40x100.png
+     ui-bg_flat_0_eeeeee_40x100.png
+     ui-bg_flat_55_ffffff_40x100.png
+     ui-bg_flat_75_ffffff_40x100.png
+     ui-bg_glass_65_ffffff_1x400.png
+     ui-bg_highlight-soft_100_f6f6f6_1x100.png
+     ui-bg_highlight-soft_25_0073ea_1x100.png
+     ui-bg_highlight-soft_50_dddddd_1x100.png
+     ui-icons_0073ea_256x240.png
+     ui-icons_454545_256x240.png
+     ui-icons_666666_256x240.png
+     ui-icons_ff0084_256x240.png
+     ui-icons_ffffff_256x240.png
+    }
+   }
+  }
+  plugins=plugins {
+  }
+ }
+
+
+ rails source=/Users/rreusser/.rvm/gems/ruby-1.9.3-p0/gems {
+
+  active_record 3.1.3=activerecord-3.1.3/lib filter="*" {
+   active_record.rb
+   active_record=active_record {
+    aggregations.rb
+    associations.rb
+    attribute_methods.rb
+    autosave_association.rb
+    base.rb
+    callbacks.rb
+    counter_cache.rb
+    dynamic_finder_match.rb
+    dynamic_scope_match.rb
+    errors.rb
+    fixtures.rb
+    identity_map.rb
+    log_subscriber.rb
+    migration.rb
+    named_scope.rb
+    nested_attributes.rb
+    observer.rb
+    persistence.rb
+    query_cache.rb
+    railtie.rb
+    reflection.rb
+    relation.rb
+    result.rb
+    schema.rb
+    schema_dumper.rb
+    serialization.rb
+    session_store.rb
+    test_case.rb
+    timestamp.rb
+    transactions.rb
+    validations.rb
+    version.rb
+    associations=associations {
+     alias_tracker.rb
+     association.rb
+     association_scope.rb
+     belongs_to_association.rb
+     belongs_to_polymorphic_association.rb
+     collection_association.rb
+     collection_proxy.rb
+     has_and_belongs_to_many_association.rb
+     has_many_association.rb
+     has_many_through_association.rb
+     has_one_association.rb
+     has_one_through_association.rb
+     join_dependency.rb
+     join_helper.rb
+     preloader.rb
+     singular_association.rb
+     through_association.rb
+     builder=builder {
+      association.rb
+      belongs_to.rb
+      collection_association.rb
+      has_and_belongs_to_many.rb
+      has_many.rb
+      has_one.rb
+      singular_association.rb
+     }
+     join_dependency=join_dependency {
+      join_association.rb
+      join_base.rb
+      join_part.rb
+     }
+     preloader=preloader {
+      association.rb
+      belongs_to.rb
+      collection_association.rb
+      has_and_belongs_to_many.rb
+      has_many.rb
+      has_many_through.rb
+      has_one.rb
+      has_one_through.rb
+      singular_association.rb
+      through_association.rb
+     }
+    }
+    attribute_methods=attribute_methods {
+     before_type_cast.rb
+     dirty.rb
+     primary_key.rb
+     query.rb
+     read.rb
+     time_zone_conversion.rb
+     write.rb
+    }
+    coders=coders {
+     yaml_column.rb
+    }
+    connection_adapters=connection_adapters {
+     abstract_adapter.rb
+     column.rb
+     mysql2_adapter.rb
+     mysql_adapter.rb
+     postgresql_adapter.rb
+     sqlite3_adapter.rb
+     sqlite_adapter.rb
+     statement_pool.rb
+     abstract=abstract {
+      connection_pool.rb
+      connection_specification.rb
+      database_limits.rb
+      database_statements.rb
+      query_cache.rb
+      quoting.rb
+      schema_definitions.rb
+      schema_statements.rb
+     }
+    }
+    locale=locale {
+     en.yml
+    }
+    locking=locking {
+     optimistic.rb
+     pessimistic.rb
+    }
+    migration=migration {
+     command_recorder.rb
+    }
+    railties=railties {
+     console_sandbox.rb
+     controller_runtime.rb
+     databases.rake
+     jdbcmysql_error.rb
+    }
+    relation=relation {
+     batches.rb
+     calculations.rb
+     finder_methods.rb
+     predicate_builder.rb
+     query_methods.rb
+     spawn_methods.rb
+    }
+    serializers=serializers {
+     xml_serializer.rb
+    }
+    validations=validations {
+     associated.rb
+     uniqueness.rb
+    }
+   }
+   rails=rails {
+    generators=generators {
+     active_record.rb
+     active_record=active_record {
+      migration.rb
+      migration=migration {
+       migration_generator.rb
+       templates=templates {
+        migration.rb
+       }
+      }
+      model=model {
+       model_generator.rb
+       templates=templates {
+        migration.rb
+        model.rb
+        module.rb
+       }
+      }
+      observer=observer {
+       observer_generator.rb
+       templates=templates {
+        observer.rb
+       }
+      }
+      session_migration=session_migration {
+       session_migration_generator.rb
+       templates=templates {
+        migration.rb
+       }
+      }
+     }
+    }
+   }
+  }
+
+  active_resource 3.1.3=activeresource-3.1.3/lib filter="*" {
+   active_resource.rb
+   active_resource=active_resource {
+    base.rb
+    connection.rb
+    custom_methods.rb
+    exceptions.rb
+    formats.rb
+    http_mock.rb
+    log_subscriber.rb
+    observing.rb
+    railtie.rb
+    schema.rb
+    validations.rb
+    version.rb
+    formats=formats {
+     json_format.rb
+     xml_format.rb
+    }
+   }
+  }
+
+  devise 2.0.2=devise-2.0.2/lib filter="*" {
+   devise.rb
+   devise=devise {
+    delegator.rb
+    failure_app.rb
+    mapping.rb
+    models.rb
+    modules.rb
+    omniauth.rb
+    param_filter.rb
+    path_checker.rb
+    rails.rb
+    schema.rb
+    test_helpers.rb
+    version.rb
+    controllers=controllers {
+     helpers.rb
+     rememberable.rb
+     scoped_views.rb
+     url_helpers.rb
+    }
+    encryptors=encryptors {
+     authlogic_sha512.rb
+     base.rb
+     clearance_sha1.rb
+     restful_authentication_sha1.rb
+     sha1.rb
+     sha512.rb
+    }
+    hooks=hooks {
+     activatable.rb
+     forgetable.rb
+     rememberable.rb
+     timeoutable.rb
+     trackable.rb
+    }
+    mailers=mailers {
+     helpers.rb
+    }
+    models=models {
+     authenticatable.rb
+     confirmable.rb
+     database_authenticatable.rb
+     encryptable.rb
+     lockable.rb
+     omniauthable.rb
+     recoverable.rb
+     registerable.rb
+     rememberable.rb
+     serializable.rb
+     timeoutable.rb
+     token_authenticatable.rb
+     trackable.rb
+     validatable.rb
+    }
+    omniauth=omniauth {
+     config.rb
+     url_helpers.rb
+    }
+    orm=orm {
+     active_record.rb
+     mongoid.rb
+    }
+    rails=rails {
+     routes.rb
+     warden_compat.rb
+    }
+    strategies=strategies {
+     authenticatable.rb
+     base.rb
+     database_authenticatable.rb
+     rememberable.rb
+     token_authenticatable.rb
+    }
+   }
+   generators=generators {
+    active_record=active_record {
+     devise_generator.rb
+     templates=templates {
+      migration.rb
+      migration_existing.rb
+     }
+    }
+    devise=devise {
+     devise_generator.rb
+     install_generator.rb
+     orm_helpers.rb
+     views_generator.rb
+    }
+    mongoid=mongoid {
+     devise_generator.rb
+    }
+    templates=templates {
+     README
+     devise.rb
+     markerb=markerb {
+      confirmation_instructions.markerb
+      reset_password_instructions.markerb
+      unlock_instructions.markerb
+     }
+     simple_form_for=simple_form_for {
+      confirmations=confirmations {
+       new.html.erb
+      }
+      passwords=passwords {
+       edit.html.erb
+       new.html.erb
+      }
+      registrations=registrations {
+       edit.html.erb
+       new.html.erb
+      }
+      sessions=sessions {
+       new.html.erb
+      }
+      unlocks=unlocks {
+       new.html.erb
+      }
+     }
+    }
+   }
+  }
+
+  devise_invitable 1.0.0=devise_invitable-1.0.0/lib filter="*" {
+   devise_invitable.rb
+   devise_invitable=devise_invitable {
+    inviter.rb
+    mailer.rb
+    model.rb
+    rails.rb
+    routes.rb
+    version.rb
+    model.rb~
+    controllers=controllers {
+     helpers.rb
+     url_helpers.rb
+    }
+   }
+   generators=generators {
+    active_record=active_record {
+     devise_invitable_generator.rb
+     templates=templates {
+      migration.rb
+     }
+    }
+    devise_invitable=devise_invitable {
+     devise_invitable_generator.rb
+     install_generator.rb
+     views_generator.rb
+    }
+    mongoid=mongoid {
+     devise_invitable_generator.rb
+    }
+   }
+  }
+
+ }
+
+}
