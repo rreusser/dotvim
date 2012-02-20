@@ -8,6 +8,8 @@ snippet rt
 		format.html { ${1:block} }
 		format.json { ${2:block} }
 	end
+snippet match
+	match '${1:model}s/:id/${2:action}' => '${3:$1}s#${4:$2}', :as=>:${5:$1_$2}, :via=>:${6:method}
 snippet :a
 	:action => ${1:action}
 snippet dt
@@ -17,11 +19,11 @@ snippet ct
 		t.${2}
 	end
 snippet ac
-	add_column :${1:tablename}, :${2:columnname}, :${3:type}
+	add_column :${1:tablename}, :${2:columnname}, :${3:string}
 snippet rc
 	remove_column :${1:tablename}, :${2:columnname}
 snippet arc
-	add_column :${1:tablename}, :${2:columnname}, :${3:type}
+	add_column :${1:tablename}, :${2:columnname}, :${3:string}
 	remove_column :${4:$1}, :${5:$2}
 snippet :i
 	:id => ${1:id}
@@ -45,6 +47,8 @@ snippet AS::
 	ActiveSupport
 snippet AV::
 	ActionView
+snippet aa
+	attr_accessible :${1:attribute}
 snippet anaf
 	accepts_nested_attributes_for :${1:model}
 snippet bt
@@ -66,35 +70,35 @@ snippet ho
 snippet :rejif
 	:reject_if => lambda { |${1:c}| ${2} }
 snippet logd
-	logger.debug
+	logger.debug 
 snippet loge
-	logger.error
+	logger.error 
 snippet logf
-	logger.fatal
+	logger.fatal 
 snippet logi
-	logger.info
+	logger.info 
 snippet logw
-	logger.warn
+	logger.warn 
 snippet va
-	validates_associated
+	validates_associated :${1:attribute}
 snippet vb
-	validates_acceptance_of
+	validates_acceptance_of :${1:attribute}
 snippet vc
-	validates_confirmation_of
+	validates_confirmation_of :${1:attribute}
 snippet ve
-	validates_exclusion_of
+	validates_exclusion_of :${1:attribute}
 snippet vf
-	validates_format_of
+	validates_format_of :${1:attribute}
 snippet vi
-	validates_inclusion_of
+	validates_inclusion_of :${1:attribute}
 snippet vl
-	validates_length_of
+	validates_length_of :${1:attribute}
 snippet vn
-	validates_numericality_of
+	validates_numericality_of :${1:attribute}
 snippet vp
-	validates_presence_of
+	validates_presence_of :${1:attribute}
 snippet vu
-	validates_uniqueness_of
+	validates_uniqueness_of :${1:attribute}
 
 
 

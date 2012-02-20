@@ -44,8 +44,8 @@ if exists("syntax_on")
 		hi link htmlTagName                 xmlTagName
 		hi link htmlEndTag                  xmlEndTag
 
-		highlight Normal                    guifg=#E6E1DC guibg=#111111 ctermbg=234
-		highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
+		"highlight Normal                    guifg=#E6E1DC guibg=#111111 ctermbg=234
+		highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15
 		highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
 
 		highlight Comment                   guifg=#BC9458 ctermfg=239 gui=italic
@@ -95,7 +95,7 @@ if exists("syntax_on")
 		highlight SpellCap                  guifg=#D0D0FF ctermfg=39 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 		highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
 
-		highlight Directory 								guifg=#FF0000 ctermfg=104
+		highlight Directory 								guifg=#FF0000 ctermfg=130
 
 		highlight helpIgnore							  ctermfg=82
 		highlight helpBar									  ctermfg=82
