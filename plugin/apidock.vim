@@ -34,3 +34,10 @@ function! GoogleRailsAPI(keyword)
   exec '!'.g:browser.' '.url.' &'
 endfunction
 noremap RA :call GoogleRailsAPI(expand('<cword>'))<CR>
+
+" Open the Rspec ApiDock page for the word under cursor, in a new Firefox tab
+function! GoogleJqueryAPI(keyword)
+  let url = 'http://www.google.com/search?btnI\&q=site\%3Aapi.jquery.com+'.a:keyword
+  exec '!'.g:browser.' '.url.' &'
+endfunction
+noremap RJ :call GoogleJqueryAPI(expand('<cword>'))<CR>

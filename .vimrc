@@ -9,6 +9,7 @@
 "	to recover the file type
 "	vi -r filename
 
+filetype plugin on
 set nocompatible
 
 "set backup                      " keep a backup file
@@ -27,7 +28,7 @@ set smarttab
 set smartindent			" Indent in smart fashion
 set autoindent
 set sm				" automatic matching braces
-
+set expandtab
 
 "set mouse=a                     " Use the mouse in all modes
 "set mousemodel=popup            " Turn on the popup menu
@@ -99,4 +100,20 @@ au! Syntax synhm4 source /usr/share/vim/vim72/syntax/synhm4.vim
 set winminwidth=0
 set winminheight=0
 
+set pastetoggle=<F12>
+
 colorscheme railscasts
+
+
+
+
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
+
+:inoremap # X#
+
+syntax match Tab /\t/
+hi Tab gui=underline guifg=blue ctermbg=blue
+
+

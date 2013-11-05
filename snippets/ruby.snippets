@@ -1,3 +1,26 @@
+snippet ofs
+	options_for_select(${1:list})
+snippet fk
+	:foreign_key=>:${1:key}
+snippet mdl
+	module ${1:name}
+		extend ActiveSupport::Concern
+
+		module ClassMethods
+
+			def ${2:name} options={}
+				options.reverse_merge!({ :defaults=>[] })
+				${3}
+			end
+
+		end
+
+		module InstanceMethods
+		end
+
+	end
+
+	ActiveRecord::Base.send(:include, ${4:$1})
 # #!/usr/bin/ruby
 snippet #!
 	#!/usr/bin/ruby
@@ -7,12 +30,31 @@ snippet rt
 		format.html { ${1:block} }
 		format.json { ${2:block} }
 	end
+snippet bf
+	before_filter :${1:function}
+snippet ***'
+	puts "[0;31m***********************************************************************"
+	puts "${1}"
+	puts "***********************************************************************[0m"
+snippet ***
+	puts "[0;31m***********************************************************************"
+	puts "#{${1}}"
+	puts "***********************************************************************[0m"
+snippet scp
+	scope :${1:name}, ${2:expr}
+snippet scpl
+	scope :${1:name}, lambda { ${2}
+	}
 snippet match
 	match '${1:model}s/:id/${2:action}' => '${3:$1}s#${4:$2}', :as=>:${5:$1_$2}, :via=>:${6:method}
 snippet :a
 	:action => ${1:action}
 snippet dt
 	drop_table :${1:tablename}
+snippet cht
+	change_table :${1:tablename} do |t|
+		t.${2}
+	end
 snippet ct
 	create_table :${1:tablename} do |t|
 		t.${2}
@@ -66,6 +108,7 @@ snippet hm
 	has_many :${1:model}
 snippet hmt
 	has_many :${1:object}, :through => :${2:association}
+	has_many :${3:$2}
 snippet pm
 	:polymorphic => true
 snippet ho
@@ -93,7 +136,7 @@ snippet ve
 snippet vf
 	validates_format_of :${1:attribute}
 snippet vi
-	validates_inclusion_of :${1:attribute}
+	validates_inclusion_of :${1:attribute}, :in => ${2:set}
 snippet vl
 	validates_length_of :${1:attribute}
 snippet vn
@@ -102,10 +145,6 @@ snippet vp
 	validates_presence_of :${1:attribute}
 snippet vu
 	validates_uniqueness_of :${1:attribute}
-
-
-
-# New Block
 snippet =b
 	=begin rdoc
 		${1}
@@ -162,41 +201,6 @@ snippet until
 	until ${1:condition}
 		${2}
 	end
-snippet cla class .. end
-	class ${1:`substitute(Filename(), '^.', '\u&', '')`}
-		${2}
-	end
-snippet cla class .. initialize .. end
-	class ${1:`substitute(Filename(), '^.', '\u&', '')`}
-		def initialize(${2:args})
-			${3}
-		end
-
-
-	end
-snippet cla class .. < ParentClass .. initialize .. end
-	class ${1:`substitute(Filename(), '^.', '\u&', '')`} < ${2:ParentClass}
-		def initialize(${3:args})
-			${4}
-		end
-
-
-	end
-snippet cla ClassName = Struct .. do .. end
-	${1:`substitute(Filename(), '^.', '\u&', '')`} = Struct.new(:${2:attr_names}) do
-		def ${3:method_name}
-			${4}
-		end
-
-
-	end
-snippet cla class BlankSlate .. initialize .. end
-	class ${1:BlankSlate}
-		instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }
-snippet cla class << self .. end
-	class << ${1:self}
-		${2}
-	end
 # class .. < DelegateClass .. initialize .. end
 snippet cla-
 	class ${1:`substitute(Filename(), '^.', '\u&', '')`} < DelegateClass(${2:ParentClass})
@@ -217,6 +221,10 @@ snippet mod module .. module_function .. end
 		module_function
 
 		${2}
+	end
+snippet cla
+	class ${1:ClassName} < ${2:ActiveRecord::Base}
+		${3}
 	end
 snippet mod module .. ClassMethods .. end
 	module ${1:`substitute(Filename(), '^.', '\u&', '')`}
