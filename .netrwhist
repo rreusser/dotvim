@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/rreusser/Research'
-let g:netrw_dirhist_2='/Users/rreusser/hfc/src/ofakind/.git'
-let g:netrw_dirhist_3='/Users/rreusser/hfc/src/teepublic-files/teepublic/app/views/home/browse_panels'
-let g:netrw_dirhist_4='/Users/rreusser/hfc/src/happyfuncontest/app/views/contests'
-let g:netrw_dirhist_5='/Users/rreusser/hfc/src/ofakind/app/views/partner_pages'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/rreusser/hfc/src/opine/opine/app/views/home'

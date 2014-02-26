@@ -30,6 +30,7 @@ let s:c['scope_aliases'] = get(s:c,'scope_aliases',
 	  \ ,'ur': 'html,javascript'
 	  \ ,'mxml': 'actionscript'
 	  \ ,'eruby': 'eruby-rails,html'
+	  \ ,'erb': 'html'
 	  \ } )
 
 " set this to "\<tab>" to make snipmate not swallow tab (make sure to not have

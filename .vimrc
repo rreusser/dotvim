@@ -94,6 +94,7 @@ map <leader>p :ConqueTermTab zsh<CR>
 map <leader>[ :ConqueTermTab rails c<CR>
 
 au BufRead,BufNewFile *.synhm4 set filetype=synhm4
+au BufNewFile,BufRead *.less set filetype=less
 
 au! Syntax synhm4 source /usr/share/vim/vim72/syntax/synhm4.vim
 
@@ -115,5 +116,4 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
 syntax match Tab /\t/
 hi Tab gui=underline guifg=blue ctermbg=blue
-
 

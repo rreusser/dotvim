@@ -1,3 +1,22 @@
+snippet akqap
+	/**
+	 * @name HOLIDAY.${1:Module}-_${2:function}
+	 * @function
+	 * @description ${3}
+	 */
+	_$2 = function(${4}) {
+		${5}
+	},
+snippet akqa
+	/**
+	 * @name HOLIDAY.${1:Module}-_${2:function}
+	 * @exports HOLIDAY.$3-$2 as HOLIDAY.$1.$2
+	 * @function
+	 * @description ${3}
+	 */
+	_$2 = function(${4}) {
+		${5}
+	},
 snippet jqimageonce
 	$("${1:selector}").one('load', function() {
 		${2:stuff}
