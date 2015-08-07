@@ -5,16 +5,18 @@
 " Please modify as you get comfortable.a
 " It is subject to revisions and improvements
 " SWAP FILE ALERT !!
-"	when this happens, it usually means that your editor crashed 
-"	to recover the file type
-"	vi -r filename
+" when this happens, it usually means that your editor crashed 
+" to recover the file type
+" vi -r filename
+
+execute pathogen#infect()
 
 filetype plugin on
 set nocompatible
 
 "set backup                      " keep a backup file
 set viminfo='20,\"50            " read/write a .viminfo file, don't store more
-			                          " than 50 lines of registers
+                                " than 50 lines of registers
 set history=50                  " keep 50 lines of command line history
 set ruler                       " show the cursor position all the time
 "set nu
@@ -25,9 +27,9 @@ set hlsearch                    " Highlihting the last used search pattern
 set shiftwidth=2
 set tabstop=2
 set smarttab
-set smartindent			" Indent in smart fashion
+set smartindent      " Indent in smart fashion
 set autoindent
-set sm				" automatic matching braces
+set sm        " automatic matching braces
 set expandtab
 
 "set mouse=a                     " Use the mouse in all modes
@@ -49,14 +51,14 @@ if has("syntax")
 endif
 
 set number
-				" set sm 	---> switch on brace matching
-				" set nosm	---> switch off brace matching
-set wildmenu			" Wild menu option is on
+        " set sm   ---> switch on brace matching
+        " set nosm  ---> switch off brace matching
+set wildmenu      " Wild menu option is on
 "set showmode
 set showcmd
 "set wrapmargin=10
 
-"set dir=~/vi_swap  	    	" swap directory
+"set dir=~/vi_swap          " swap directory
 
 :let fortran_have_tabs=1
 :let fortran_free_source=1
@@ -70,10 +72,10 @@ if bufwinnr(1)
     map <Down> <c-w>j
     map <Left> <c-w>h
     map <Right> <c-w>l
-		map <c-w>1 10<c-w><
-		map <c-w>3 10<c-w>>
-		map <c-w><c-w> 10<c-w>+
-		map <c-w>2 10<c-w>-
+    map <c-w>1 10<c-w><
+    map <c-w>3 10<c-w>>
+    map <c-w><c-w> 10<c-w>+
+    map <c-w>2 10<c-w>-
 endif
 
 map - gT
@@ -95,6 +97,7 @@ map <leader>[ :ConqueTermTab rails c<CR>
 
 au BufRead,BufNewFile *.synhm4 set filetype=synhm4
 au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.mc set filetype=maxima
 
 au! Syntax synhm4 source /usr/share/vim/vim72/syntax/synhm4.vim
 
@@ -103,13 +106,15 @@ set winminheight=0
 
 set pastetoggle=<F12>
 
-colorscheme railscasts
+"colorscheme railscasts
+colorscheme spacegray
 
 
 
 
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=2 tabstop=2
 
 
 :inoremap # X#
@@ -117,3 +122,23 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 syntax match Tab /\t/
 hi Tab gui=underline guifg=blue ctermbg=blue
 
+
+"function! DelTagOfFile(file)
+  "let fullpath = a:file
+  "let cwd = getcwd()
+  "let tagfilename = cwd . "/tags"
+  "let f = substitute(fullpath, cwd . "/", "", "")
+  "let f = escape(f, './')
+  "let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+  "let resp = system(cmd)
+"endfunction
+
+"function! UpdateTags()
+  "let f = expand("%:p")
+  "let cwd = getcwd()
+  "let tagfilename = cwd . "/tags"
+  "let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
+  "call DelTagOfFile(f)
+  "let resp = system(cmd)
+"endfunction
+"autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()

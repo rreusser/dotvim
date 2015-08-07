@@ -30,15 +30,17 @@ snippet rt
 		format.html { ${1:block} }
 		format.json { ${2:block} }
 	end
+snippet ba
+	before_action :${1:function}
 snippet bf
 	before_filter :${1:function}
-snippet ***'
-	puts "[0;31m***********************************************************************"
-	puts "${1}"
-	puts "***********************************************************************[0m"
 snippet ***
-	puts "[0;31m***********************************************************************"
-	puts "#{${1}}"
+	puts "[0;34m***********************************************************************"
+	puts ${1}
+	puts "***********************************************************************[0m"
+snippet ***'
+	puts "[0;34m***********************************************************************"
+	puts "${1}"
 	puts "***********************************************************************[0m"
 snippet scp
 	scope :${1:name}, ${2:expr}
@@ -116,15 +118,15 @@ snippet ho
 snippet :rejif
 	:reject_if => lambda { |${1:c}| ${2} }
 snippet logd
-	logger.debug 
+	logger.debug
 snippet loge
-	logger.error 
+	logger.error
 snippet logf
-	logger.fatal 
+	logger.fatal
 snippet logi
-	logger.info 
+	logger.info
 snippet logw
-	logger.warn 
+	logger.warn
 snippet va
 	validates_associated :${1:attribute}
 snippet vb

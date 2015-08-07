@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/rreusser/hfc/src/opine/opine/app/views/home'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/rreusser/foodstand/foodstand-web/app/controllers/admin/reports'
+let g:netrw_dirhist_2='/Users/rreusser/foodstand/foodstand-web/app/controllers/admin/tools'
+let g:netrw_dirhist_3='/Users/rreusser/foodstand/foodstand-web/app/controllers/admin/reports'
+let g:netrw_dirhist_4='/Users/rreusser/projects/node/scijs/integrate-simpson'
+let g:netrw_dirhist_5='/Users/rreusser/foodstand/foodstand-web/app/views/contests/redeats'
+let g:netrw_dirhist_6='/Users/rreusser/foodstand/foodstand-web/app/views/posts'
+let g:netrw_dirhist_7='/Users/rreusser/foodstand/foodstand-web/app/views/contests/redeats'
+let g:netrw_dirhist_8='/Users/rreusser/.vim/bundle/handlebars/ftdetect'
